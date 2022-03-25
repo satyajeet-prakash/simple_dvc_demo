@@ -16,6 +16,7 @@ Install the requirements
 pip install -r requirements.txt
 ```
 
+```bash
 git init
 
 dvc init
@@ -23,3 +24,10 @@ dvc init
 dvc add data_given/winequality.csv
 
 git add . && git commit -m "first commit"
+
+git remote add origin git@github.com:satyajeet-prakash/simple_dvc_demo.git
+
+git branch -M main
+ 
+git push -u origin main
+```
