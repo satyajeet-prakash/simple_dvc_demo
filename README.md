@@ -34,3 +34,10 @@ git branch -M main
  
 git push -u origin main
 ```
+
+
+<h3> Testing </h3>
+<pre>Add pytest and tox to requirements file</pre>pre>
+
+
+
