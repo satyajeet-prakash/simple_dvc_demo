@@ -37,7 +37,32 @@ git push -u origin main
 
 
 <h3> Testing </h3>
-<pre>Add pytest and tox to requirements file</pre>pre>
+<pre>Add pytest and tox to requirements file</pre>
+
+tox command - 
+```bash
+tox
+```
+
+tox command for rebuilding -
+```bash
+tox -r
+```
+
+pytest command
+```bash
+pytest -v
+```
+
+setup command
+```bash
+pip install -e .
+```
+
+build your own package commands -
+```bash
+python setup.py sdist bdist_wheel
+```
 
 
 
