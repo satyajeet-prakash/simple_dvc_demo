@@ -1,11 +1,12 @@
 # split the raw data
 # save the data in data/processed folder
 
-import os
+
 import argparse
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from get_data import read_params
+
 
 def split_and_save_data(config_path):
     config = read_params(config_path)
@@ -20,9 +21,9 @@ def split_and_save_data(config_path):
         df,
         test_size=split_ratio,
         random_state=random_state
-        )
+    )
     train.to_csv(train_data_path, sep=",", index=False, encoding='utf-8')
-    test.to_csv(test_data_path,  sep=",", index=False, encoding='utf-8')
+    test.to_csv(test_data_path, sep=",", index=False, encoding='utf-8')
 
 
 if __name__ == "__main__":

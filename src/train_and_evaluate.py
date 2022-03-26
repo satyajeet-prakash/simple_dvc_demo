@@ -3,14 +3,10 @@
 # save the metrics, params
 
 import os
-import warnings
-import sys
-
 
 import pandas as pd
 import numpy as np
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
-from sklearn.model_selection import train_test_split
 from sklearn.linear_model import ElasticNet
 from get_data import read_params
 import argparse
@@ -50,7 +46,7 @@ def train_and_evaluate(config_path):
         alpha=alpha,
         l1_ratio=l1_ratio,
         random_state=random_state
-        )
+    )
     lr.fit(train_x, train_y)
 
     predicted_qualities = lr.predict(test_x)
@@ -85,6 +81,7 @@ def train_and_evaluate(config_path):
     model_path = os.path.join(model_dir, "model.joblib")
 
     joblib.dump(lr, model_path)
+
 
 if __name__ == "__main__":
     args = argparse.ArgumentParser()
