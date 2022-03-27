@@ -27,4 +27,5 @@ reports:
   params: report/params.json
   scores: report/scores.json
 
+# model path change for flask app
 webapp_model_dir: prediction_service/model/model.joblib
